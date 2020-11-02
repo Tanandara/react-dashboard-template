@@ -1,20 +1,14 @@
-import React, { Component } from "react";
-import { Row, Input, Button } from 'reactstrap';
-import { loggedIn, history } from '../App';
+import React from "react";
+import { Row } from 'reactstrap';
+import { loggedIn } from '../App';
 import { useHistory } from 'react-router-dom';
 
-function ClickToLogin() {
-    loggedIn.status = true;
-    history.push('/');
-
-}
-
 export default function Login() {
-    const history2 = useHistory();
-    const ClickToLogin2 = () => {
+    const history = useHistory();
+    const ClickToLogin = () => {
         debugger;
         loggedIn.status = true;
-        history2.push('/');
+        history.push('/');
     }
     return (
         <div>
@@ -24,7 +18,7 @@ export default function Login() {
                 <aside className="col-sm-4">
                     <div className="card">
                         <article className="card-body">
-                            <a href="" className="float-right btn btn-outline-primary">Sign up</a>
+                            <a href="/#" className="float-right btn btn-outline-primary">Sign up</a>
                             <h4 className="card-title mb-4 mt-1">Sign in</h4>
                             <form>
                                 <div className="form-group">
@@ -32,7 +26,7 @@ export default function Login() {
                                     <input name="" className="form-control" placeholder="Email" type="email" />
                                 </div>
                                 <div className="form-group">
-                                    <a className="float-right" href="#">Forgot?</a>
+                                    <a className="float-right" href="/#">Forgot?</a>
                                     <label>Your password</label>
                                     <input className="form-control" placeholder="******" type="password" />
                                 </div>
@@ -42,7 +36,7 @@ export default function Login() {
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <button onClick={ClickToLogin2} type="submit" className="btn btn-primary btn-block"> Login  </button>
+                                    <button onClick={ClickToLogin} type="submit" className="btn btn-primary btn-block"> Login  </button>
                                 </div>
                             </form>
                         </article>

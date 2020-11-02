@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import { Card, CardBody, CardGroup, Col, Container, Row } from 'reactstrap';
+import React from "react";
+import { Col, Container, Row } from 'reactstrap';
 
-export default function GeneralLayout(rest: any, props: any) {
-    const { component } = rest;
+export default function GeneralLayout(props: any) {
+    debugger;
+    const { component } = props;
     return (
         <Container>
             <Row>
